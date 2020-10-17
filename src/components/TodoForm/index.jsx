@@ -5,7 +5,7 @@ import * as actionsList from '../../redux/action'
 
 import styles from './styles.module.sass';
 
-const  TodoForm = (props) => {
+const  TodoForm = () => {
 
   const [title, setTitle] = useState('')
 

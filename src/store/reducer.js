@@ -12,7 +12,11 @@ const postReducer = (state = initialState, action) => {
         case types.ADD_ToDo:
             return {
                 ...state, 
-                state : state.list.push({id : uuidv4(), title : action.title})
+                state : state.list.push({
+                    id : uuidv4(), 
+                    title : action.title,
+                    is_compelted : false
+                })
             }
         case types.DELETE_ToDo:
             return {
@@ -26,6 +30,13 @@ const postReducer = (state = initialState, action) => {
                      ...state, 
                      state : state.listupdated
                     }
+        case types.IS_COMPELETED:
+            const list = state.list.find(list => list.id === action.id)
+            list[is_compelted] = true
+            return {
+                ...state,
+                state : state.list
+            }
         default :
             return state
     }
