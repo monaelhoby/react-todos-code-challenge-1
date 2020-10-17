@@ -16,6 +16,7 @@ const  Form  = props => {
   //to check if compeleted or not
   const [isCompeleted, setIsCompeleted] = useState(false)
 
+
   //toggle Edit State
   const toggleState = () =>{
     setIsEdit(!isEdit)
@@ -33,6 +34,12 @@ const  Form  = props => {
       return dispatch(actionList.deleteTitle(id))
   }
 
+  // handle is_comelete function
+  const isCompeleted = id => {
+    setIsCompeleted(true)
+    return dispatch(actionList.isCompeleted(id))
+  }
+
 // render default function without clicked on update button
  const RenderSimpleForm = () => {
   return (
@@ -47,7 +54,7 @@ const  Form  = props => {
         Delete
       </button>
       <button className={styles.completeBtn} 
-        onClick={ () => setIsCompeleted(!isCompeleted)}>
+        onClick={ () => isCompeleted(props.id)}>
         Compelete
       </button>
     </div>

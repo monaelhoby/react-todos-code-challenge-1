@@ -16,7 +16,7 @@ const  TodoForm = () => {
   const handleSubmit = e => {
     e.preventDefault()
     setTitle('')
-    return dispatch(actionsList.addTitle(title))
+    return dispatch(actionsList.addToDo(title))
   }
   return (
     <form onSubmit={handleSubmit}>
