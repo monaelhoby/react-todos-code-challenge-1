@@ -1,6 +1,9 @@
+.cardWrapper
+    padding-left: 10px
+    overflow : hidden
 .card
     box-sizing: border-box
-    width: 100%
+    width: calc(100% - 60px)
     padding: 25px 30px
     background-color: #eee
     border: 1px solid #888
@@ -22,7 +25,7 @@
 
 .completeBtn
     @include button()
-    background-color: #0a0
+    background-color: #444
     color: #fff
 
 .deleteBtn
@@ -30,3 +33,29 @@
     background-color: #a00
     color: #fff
 
+.editBtn
+    @include button()
+    background-color: #0a0
+    color: #fff
+
+.isCompeletedStyle
+    text-decoration : line-through
+.input
+    box-sizing: border-box
+    width: 80%
+    padding: 20px  0 20px 20px
+    font-size: 2rem
+    margin-bottom: 25px
+    border: 1px solid #888
+    outline: 0
+    height : 80px
+    display : inline-block
+
+
+.updateBtn
+    @include button()
+    width: 15%
+    padding: 36px 0
+    background-color: #444
+    color: #fff
+    height : 80px
