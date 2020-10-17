@@ -53,7 +53,7 @@ const  Form  = props => {
         onClick={ () => {deleteList(props.id)}}>
         Delete
       </button>
-      <button className={styles.completeBtn} 
+      <button className={styles.completeBtn} style={{background : isCompeleted ? "#AAA" : "#444"}}
         onClick={ () => setCompeleted(props.id)}>
         Compelete
       </button>
