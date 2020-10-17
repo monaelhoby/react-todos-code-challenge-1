@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useDispatch} from 'react-redux'
 
 import styles from './styles.module.sass';
-import * as actionList from '../../redux/action'
+import * as actionList from '../../store/action'
 
 
 const  Form  = props => {
@@ -25,17 +25,17 @@ const  Form  = props => {
   // when click on update button fire 
   const updateRow = (e) => {
     e.preventDefault();
-    dispatch(actionList.updateTitle(props.id,title));
+    dispatch(actionList.updateToDo(props.id,title));
     toggleState();
   }
 
   //to remove item from list
     const deleteList = (id) => {
-      return dispatch(actionList.deleteTitle(id))
+      return dispatch(actionList.deleteToDo(id))
   }
 
   // handle is_comelete function
-  const isCompeleted = id => {
+  const setCompeleted = id => {
     setIsCompeleted(true)
     return dispatch(actionList.isCompeleted(id))
   }
@@ -54,7 +54,7 @@ const  Form  = props => {
         Delete
       </button>
       <button className={styles.completeBtn} 
-        onClick={ () => isCompeleted(props.id)}>
+        onClick={ () => setCompeleted(props.id)}>
         Compelete
       </button>
     </div>

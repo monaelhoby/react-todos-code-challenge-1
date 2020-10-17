@@ -32,7 +32,7 @@ const postReducer = (state = initialState, action) => {
                     }
         case types.IS_COMPELETED:
             const list = state.list.find(list => list.id === action.id)
-            list[is_compelted] = true
+            list['is_compelted'] = true
             return {
                 ...state,
                 state : state.list

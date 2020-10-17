@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux'
 
-import * as actionsList from '../../redux/action'
+import * as actionsList from '../../store/action'
 
 import styles from './styles.module.sass';
 

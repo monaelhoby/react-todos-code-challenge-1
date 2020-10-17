@@ -1,45 +1,3 @@
-.cardWrapper
-    padding-left: 10px
-    overflow : hidden
-.card
-    box-sizing: border-box
-    width: calc(100% - 60px)
-    padding: 25px 30px
-    background-color: #eee
-    border: 1px solid #888
-    margin-bottom: 25px
-
-.title
-    margin: 0 0 40px
-    font-family: sans-serif
-
-@mixin button()
-    display: inline-block
-    padding: 10px 20px
-    border-radius: 0
-    border: 0
-    margin-right: 20px
-    font-size: 1rem
-    &:last-child
-        margin-right: 0
-
-.completeBtn
-    @include button()
-    background-color: #444
-    color: #fff
-
-.deleteBtn
-    @include button()
-    background-color: #a00
-    color: #fff
-
-.editBtn
-    @include button()
-    background-color: #0a0
-    color: #fff
-
-.isCompeletedStyle
-    text-decoration : line-through
 .input
     box-sizing: border-box
     width: 80%
@@ -52,10 +10,17 @@
     display : inline-block
 
 
-.updateBtn
-    @include button()
+.addBtn
+    box-sizing: border-box
     width: 15%
-    padding: 36px 0
+    padding: 37px 0
+    border-radius: 0
+    border: 0
+    margin-right: 20px
+    font-size: 1rem
     background-color: #444
     color: #fff
     height : 80px
+    display : inline-block
+    cursor : pointer
+
