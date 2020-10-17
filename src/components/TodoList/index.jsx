@@ -1,11 +1,21 @@
 import React from 'react';
+import {useSelector} from 'react-redux'
+
 import TodoItem from '../TodoItem';
 
-function TodoList() {
+const TodoList = () =>  {
+
+  // getting all list from store 
+  const listStore = useSelector(state => state)
+
+  
   return (
     <div>
-      <TodoItem />
-      <TodoItem />
+      {
+        listStore.list ? ( listStore.list.map((list, index) => (
+                              <TodoItem key={index} title={list.title} id={list.id}/>
+                          )))  : ''
+      }
     </div>
   );
 }
